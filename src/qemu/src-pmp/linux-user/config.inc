@@ -1,0 +1,4 @@
+#define BUFF_LEN 128
+#define ALLOCATE_SIZE 0x400000
+
+#define DUMP_INSN
