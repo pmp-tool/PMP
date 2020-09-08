@@ -1,0 +1,388 @@
+func: 0x45afb0 XPICK_INT 1
+SUCCESS: 0x45afb0 XPICK_INT XPICK_INT:18 18
+func: 0x45ade0 findblks 1
+SUCCESS: 0x45ade0 findblks findblks:56 56
+func: 0x459fb0 xcompact 1
+SUCCESS: 0x459fb0 xcompact xcompact:441 441
+func: 0x459e70 getProgName 1
+func: 0x459ab0 initProgram 1
+SUCCESS: 0x459ab0 initProgram initProgram:43 43
+func: 0x459f30 openFile 1
+SUCCESS: 0x459f30 openFile openFile:10 10
+func: 0x459e90 strclone 1
+SUCCESS: 0x459e90 strclone strclone:12 12
+func: 0x459730 add_dummy_feeds 1
+SUCCESS: 0x459730 add_dummy_feeds add_dummy_feeds:109 109
+func: 0x458720 utemp 1
+SUCCESS: 0x458720 utemp utemp:244 244
+func: 0x457130 urcost 1
+SUCCESS: 0x457130 urcost urcost:670 670
+func: 0x456600 upair 1
+SUCCESS: 0x456600 upair upair:360 360
+func: 0x4559e0 unlap 1
+SUCCESS: 0x4559e0 unlap unlap:373 373
+func: 0x4524d0 unetseg 1
+SUCCESS: 0x4524d0 unetseg unetseg:1504 1504
+func: 0x451900 uloop2 1
+SUCCESS: 0x451900 uloop2 uloop2:269 269
+func: 0x451830 combination 1
+SUCCESS: 0x451830 combination combination:29 29
+func: 0x451720 compute_and_combination 1
+SUCCESS: 0x451720 compute_and_combination compute_and_combination:39 39
+func: 0x4515a0 expected_svalue 1
+SUCCESS: 0x4515a0 expected_svalue expected_svalue:48 48
+func: 0x451430 expected_value 1
+SUCCESS: 0x451430 expected_value expected_value:47 47
+func: 0x4512c0 partition 1
+SUCCESS: 0x4512c0 partition partition:46 46
+func: 0x450e20 rowcon 1
+SUCCESS: 0x450e20 rowcon rowcon:107 107
+func: 0x44f340 uloop 1
+SUCCESS: 0x44f340 uloop uloop:520 520
+func: 0x44da40 ugpair 1
+SUCCESS: 0x44da40 ugpair ugpair:585 585
+func: 0x44d580 uglobrout 1
+SUCCESS: 0x44d580 uglobrout uglobrout:117 117
+func: 0x44a0c0 uglobe 1
+SUCCESS: 0x44a0c0 uglobe uglobe:1254 1254
+func: 0x449eb0 ucxxp 1
+SUCCESS: 0x449eb0 ucxxp ucxxp:71 71
+func: 0x449060 ucxxo2 1
+SUCCESS: 0x449060 ucxxo2 ucxxo2:351 351
+func: 0x448910 ucxxo1 1
+SUCCESS: 0x448910 ucxxo1 ucxxo1:192 192
+func: 0x448870 add_cell 1
+SUCCESS: 0x448870 add_cell add_cell:18 18
+func: 0x448470 find_new_pos 1
+SUCCESS: 0x448470 find_new_pos find_new_pos:128 128
+func: 0x447260 ucxx2 1
+SUCCESS: 0x447260 ucxx2 ucxx2:431 431
+func: 0x446b10 ucxx1 1
+SUCCESS: 0x446b10 ucxx1 ucxx1:191 191
+func: 0x443390 uclosepns 1
+SUCCESS: 0x443390 uclosepns uclosepns:1500 1500
+func: 0x442d10 sub_reset2 1
+SUCCESS: 0x442d10 sub_reset2 sub_reset2:208 208
+func: 0x441490 ucgxp 1
+SUCCESS: 0x441490 ucgxp ucgxp:738 738
+func: 0x441190 sub_reset1 1
+SUCCESS: 0x441190 sub_reset1 sub_reset1:89 89
+func: 0x43ffb0 ucg0 1
+SUCCESS: 0x43ffb0 ucg0 ucg0:553 553
+func: 0x43feb0 uc0 1
+SUCCESS: 0x43feb0 uc0 uc0:30 30
+func: 0x43fea0 cpu_time 1
+func: 0x43fe60 print_stats 1
+SUCCESS: 0x43fe60 print_stats print_stats:3 3
+func: 0x43fce0 shellsort 1
+SUCCESS: 0x43fce0 shellsort shellsort:46 46
+func: 0x43fad0 sortpin 1
+SUCCESS: 0x43fad0 sortpin sortpin:63 63
+func: 0x43f870 fixfdpos 1
+SUCCESS: 0x43f870 fixfdpos fixfdpos:38 38
+func: 0x43f520 TW_oldin 1
+SUCCESS: 0x43f520 TW_oldin TW_oldin:77 77
+func: 0x43f0b0 savewolf 1
+SUCCESS: 0x43f0b0 savewolf savewolf:71 71
+func: 0x43da50 readseg 1
+SUCCESS: 0x43da50 readseg readseg:456 456
+func: 0x43c980 readParFile 1
+SUCCESS: 0x43c980 readParFile readParFile:131 131
+func: 0x43c0f0 readnets 1
+SUCCESS: 0x43c0f0 readnets readnets:136 136
+func: 0x43a330 readcell 1
+SUCCESS: 0x43a330 readcell readcell:496 496
+func: 0x439a00 readblck 1
+SUCCESS: 0x439a00 readblck readblck:162 162
+func: 0x439990 Yset_random_seed 1
+SUCCESS: 0x439990 Yset_random_seed Yset_random_seed:11 11
+func: 0x4398f0 Yacm_random 1
+SUCCESS: 0x4398f0 Yacm_random Yacm_random:10 10
+func: 0x4393c0 qst 1
+SUCCESS: 0x4393c0 qst qst:137 137
+func: 0x439070 qsortx 1
+SUCCESS: 0x439070 qsortx qsortx:95 95
+func: 0x439030 comparegdx 1
+SUCCESS: 0x439030 comparegdx comparegdx:10 10
+func: 0x438b00 qstgdx 1
+SUCCESS: 0x438b00 qstgdx qstgdx:137 137
+func: 0x4387b0 qsortgdx 1
+SUCCESS: 0x4387b0 qsortgdx qsortgdx:95 95
+func: 0x438780 compareg 1
+SUCCESS: 0x438780 compareg compareg:6 6
+func: 0x438250 qstg 1
+SUCCESS: 0x438250 qstg qstg:137 137
+func: 0x437f00 qsortg 1
+SUCCESS: 0x437f00 qsortg qsortg:95 95
+func: 0x437ed0 comparee 1
+SUCCESS: 0x437ed0 comparee comparee:6 6
+func: 0x4379a0 qste 1
+SUCCESS: 0x4379a0 qste qste:137 137
+func: 0x437650 qsorte 1
+SUCCESS: 0x437650 qsorte qsorte:95 95
+func: 0x435f10 purcost 1
+SUCCESS: 0x435f10 purcost purcost:691 691
+func: 0x433590 parser 1
+SUCCESS: 0x433590 parser parser:447 447
+func: 0x433530 comparex 1
+SUCCESS: 0x433530 comparex comparex:12 12
+func: 0x432da0 output 1
+SUCCESS: 0x432da0 output output:221 221
+func: 0x432ba0 min_l_chan_edge 1
+SUCCESS: 0x432ba0 min_l_chan_edge min_l_chan_edge:69 69
+func: 0x432920 min_r_chan_edge 1
+SUCCESS: 0x432920 min_r_chan_edge min_r_chan_edge:84 84
+func: 0x430ad0 outpins 1
+SUCCESS: 0x430ad0 outpins outpins:743 743
+func: 0x430730 outcm 1
+SUCCESS: 0x430730 outcm outcm:102 102
+func: 0x430710 cleanupHandler 1
+SUCCESS: 0x430710 cleanupHandler cleanupHandler:2 2
+func: 0x4306e0 cleanup 1
+ERROR2: 0x4306e0 cleanup cleanup:2 2
+func: 0x4306c0 safe_cfree 1
+SUCCESS: 0x4306c0 safe_cfree safe_cfree:2 2
+func: 0x430690 safe_free 1
+SUCCESS: 0x430690 safe_free safe_free:3 3
+func: 0x430630 safe_calloc 1
+SUCCESS: 0x430630 safe_calloc safe_calloc:6 6
+func: 0x4305d0 safe_realloc 1
+SUCCESS: 0x4305d0 safe_realloc safe_realloc:6 6
+func: 0x430580 safe_malloc 1
+SUCCESS: 0x430580 safe_malloc safe_malloc:4 4
+func: 0x42f900 MTPremul 1
+SUCCESS: 0x42f900 MTPremul MTPremul:100 100
+func: 0x42f7f0 MTPopP 1
+SUCCESS: 0x42f7f0 MTPopP MTPopP:28 28
+func: 0x42f6f0 MTPushP 1
+SUCCESS: 0x42f6f0 MTPushP MTPushP:27 27
+func: 0x42f630 MTIPoint 1
+SUCCESS: 0x42f630 MTIPoint MTIPoint:30 30
+func: 0x42f570 MTPoint 1
+SUCCESS: 0x42f570 MTPoint MTPoint:30 30
+func: 0x42f350 MTConcat 1
+SUCCESS: 0x42f350 MTConcat MTConcat:80 80
+func: 0x42ef90 MTRotate 1
+SUCCESS: 0x42ef90 MTRotate MTRotate:103 103
+func: 0x42ef10 MTMX 1
+SUCCESS: 0x42ef10 MTMX MTMX:15 15
+func: 0x42ee90 MTMY 1
+SUCCESS: 0x42ee90 MTMY MTMY:15 15
+func: 0x430430 MTInvert 1
+SUCCESS: 0x430430 MTInvert MTInvert:43 43
+func: 0x42fc40 MTDecode 1
+SUCCESS: 0x42fc40 MTDecode MTDecode:142 142
+func: 0x42ee20 MTTransl 1
+SUCCESS: 0x42ee20 MTTransl MTTransl:15 15
+func: 0x42ecd0 MTIdenti 1
+SUCCESS: 0x42ecd0 MTIdenti MTIdenti:37 37
+func: 0x42eca0 MTEnd 1
+SUCCESS: 0x42eca0 MTEnd MTEnd:3 3
+func: 0x42ec30 MTBegin 1
+SUCCESS: 0x42ec30 MTBegin MTBegin:8 8
+func: 0x42eab0 move 1
+SUCCESS: 0x42eab0 move move:15 15
+func: 0x42e9a0 rect 1
+SUCCESS: 0x42e9a0 rect rect:37 37
+func: 0x42e900 point 1
+SUCCESS: 0x42e900 point point:17 17
+func: 0x42e770 merge 1
+SUCCESS: 0x42e770 merge merge:46 46
+func: 0x42e5a0 merge_pins 1
+SUCCESS: 0x42e5a0 merge_pins merge_pins:48 48
+func: 0x42e520 assign_group_values 1
+SUCCESS: 0x42e520 assign_group_values assign_group_values:15 15
+func: 0x42e330 add_pins 1
+SUCCESS: 0x42e330 add_pins add_pins:52 52
+func: 0x42e270 initialize_pins 1
+SUCCESS: 0x42e270 initialize_pins initialize_pins:19 19
+func: 0x42de80 mergplist 1
+SUCCESS: 0x42de80 mergplist mergplist:95 95
+func: 0x42cc10 main 1
+SUCCESS: 0x42cc10 main main:316 316
+func: 0x42cb00 impclobr 1
+SUCCESS: 0x42cb00 impclobr impclobr:28 28
+func: 0x42c7c0 impfix 1
+SUCCESS: 0x42c7c0 impfix impfix:97 97
+func: 0x42c600 implfeeds 1
+SUCCESS: 0x42c600 implfeeds implfeeds:48 48
+func: 0x42c4c0 hashfind 1
+SUCCESS: 0x42c4c0 hashfind hashfind:32 32
+func: 0x42c240 addhash 1
+SUCCESS: 0x42c240 addhash addhash:61 61
+func: 0x42c150 delHtab 1
+SUCCESS: 0x42c150 delHtab delHtab:22 22
+func: 0x42c0e0 maketabl 1
+SUCCESS: 0x42c0e0 maketabl maketabl:9 9
+func: 0x42be90 find_imp_x 1
+SUCCESS: 0x42be90 find_imp_x find_imp_x:43 43
+func: 0x42bde0 add_pin 1
+SUCCESS: 0x42bde0 add_pin add_pin:14 14
+func: 0x42bbc0 add_type 1
+SUCCESS: 0x42bbc0 add_type add_type:50 50
+func: 0x429e50 grdcell 1
+SUCCESS: 0x429e50 grdcell grdcell:570 570
+func: 0x429000 gparser 1
+SUCCESS: 0x429000 gparser gparser:189 189
+func: 0x4287e0 globroute 1
+SUCCESS: 0x4287e0 globroute globroute:194 194
+func: 0x427de0 dumpEdgeArray 1
+SUCCESS: 0x427de0 dumpEdgeArray dumpEdgeArray:245 245
+func: 0x427bc0 checkPos 1
+SUCCESS: 0x427bc0 checkPos checkPos:55 55
+func: 0x425220 globedbg 1
+SUCCESS: 0x425220 globedbg globedbg:1042 1042
+func: 0x424d10 searchG 1
+SUCCESS: 0x424d10 searchG searchG:108 108
+func: 0x424bb0 addEdge 1
+SUCCESS: 0x424bb0 addEdge addEdge:33 33
+func: 0x424a40 detGroup 1
+SUCCESS: 0x424a40 detGroup detGroup:32 32
+func: 0x4248c0 chkGroup 1
+SUCCESS: 0x4248c0 chkGroup chkGroup:33 33
+func: 0x420c30 globe 1
+SUCCESS: 0x420c30 globe globe:1372 1372
+func: 0x420150 findunlap 1
+SUCCESS: 0x420150 findunlap findunlap:329 329
+func: 0x41fc30 facing_cellheight 1
+SUCCESS: 0x41fc30 facing_cellheight facing_cellheight:165 165
+func: 0x41f840 reset_track 1
+SUCCESS: 0x41f840 reset_track reset_track:115 115
+func: 0x41f400 set_cedgebin 1
+SUCCESS: 0x41f400 set_cedgebin set_cedgebin:132 132
+func: 0x41e840 findrcost 1
+SUCCESS: 0x41e840 findrcost findrcost:352 352
+func: 0x41e440 reset_ntrack 1
+SUCCESS: 0x41e440 reset_ntrack reset_ntrack:115 115
+func: 0x41e1d0 debug 1
+SUCCESS: 0x41e1d0 debug debug:54 54
+func: 0x41d930 findrchk 1
+SUCCESS: 0x41d930 findrchk findrchk:260 260
+func: 0x41d460 detfeed 1
+SUCCESS: 0x41d460 detfeed detfeed:125 125
+func: 0x41cff0 prepglob 1
+SUCCESS: 0x41cff0 prepglob prepglob:130 130
+func: 0x41cc70 rowToBlk 1
+SUCCESS: 0x41cc70 rowToBlk rowToBlk:107 107
+func: 0x41c5b0 addfeed 1
+SUCCESS: 0x41c5b0 addfeed addfeed:226 226
+func: 0x41c0e0 fixwolf 1
+SUCCESS: 0x41c0e0 fixwolf fixwolf:134 134
+func: 0x41bf80 del_pin 1
+SUCCESS: 0x41bf80 del_pin del_pin:46 46
+func: 0x419af0 findfeeds 1
+SUCCESS: 0x419af0 findfeeds findfeeds:987 987
+func: 0x4195a0 reassign 1
+SUCCESS: 0x4195a0 reassign reassign:161 161
+func: 0x418fd0 assignro 1
+SUCCESS: 0x418fd0 assignro assignro:171 171
+func: 0x418d90 installf 1
+SUCCESS: 0x418d90 installf installf:65 65
+func: 0x417910 findcostf 1
+SUCCESS: 0x417910 findcostf findcostf:610 610
+func: 0x415790 findcost 1
+SUCCESS: 0x415790 findcost findcost:879 879
+func: 0x415260 finalwire 1
+SUCCESS: 0x415260 finalwire finalwire:126 126
+func: 0x4151b0 vert_statistics 1
+SUCCESS: 0x4151b0 vert_statistics vert_statistics:18 18
+func: 0x414bb0 check_row_values 1
+SUCCESS: 0x414bb0 check_row_values check_row_values:167 167
+func: 0x414530 initialize_rows 1
+SUCCESS: 0x414530 initialize_rows initialize_rows:176 176
+func: 0x4143a0 dbox_pos_2 1
+SUCCESS: 0x4143a0 dbox_pos_2 dbox_pos_2:56 56
+func: 0x414300 dbox_pos 1
+SUCCESS: 0x414300 dbox_pos dbox_pos:23 23
+func: 0x4140b0 term_newpos_b 1
+SUCCESS: 0x4140b0 term_newpos_b term_newpos_b:83 83
+func: 0x413e60 term_newpos_a 1
+SUCCESS: 0x413e60 term_newpos_a term_newpos_a:83 83
+func: 0x413d10 term_newpos 1
+SUCCESS: 0x413d10 term_newpos term_newpos:46 46
+func: 0x4138f0 new_dbox_a 1
+SUCCESS: 0x4138f0 new_dbox_a new_dbox_a:132 132
+func: 0x413700 new_dbox 1
+SUCCESS: 0x413700 new_dbox new_dbox:62 62
+func: 0x413590 initialize_cost 1
+SUCCESS: 0x413590 initialize_cost initialize_cost:48 48
+func: 0x413430 check_cost 1
+SUCCESS: 0x413430 check_cost check_cost:45 45
+func: 0x413300 negative 1
+SUCCESS: 0x413300 negative negative:31 31
+func: 0x412e80 chan_debug 1
+SUCCESS: 0x412e80 chan_debug chan_debug:100 100
+func: 0x412970 fcellheight 1
+SUCCESS: 0x412970 fcellheight fcellheight:170 170
+func: 0x4122c0 trackdebug 1
+SUCCESS: 0x4122c0 trackdebug trackdebug:156 156
+func: 0x411ef0 pairCheck 1
+SUCCESS: 0x411ef0 pairCheck pairCheck:109 109
+func: 0x411d20 terminal 1
+SUCCESS: 0x411d20 terminal terminal:44 44
+func: 0x4118e0 cellterm_data 1
+SUCCESS: 0x4118e0 cellterm_data cellterm_data:112 112
+func: 0x4117a0 cellbox_data 1
+SUCCESS: 0x4117a0 cellbox_data cellbox_data:32 32
+func: 0x411780 getCompileDate 1
+func: 0x411520 feed_situation 1
+SUCCESS: 0x411520 feed_situation feed_situation:61 61
+func: 0x411070 insert_row 1
+SUCCESS: 0x411070 insert_row insert_row:139 139
+func: 0x410d50 prep_feed_count 1
+SUCCESS: 0x410d50 prep_feed_count prep_feed_count:79 79
+func: 0x410880 prep_feed_count_1 1
+SUCCESS: 0x410880 prep_feed_count_1 prep_feed_count_1:129 129
+func: 0x40fd90 countf 1
+SUCCESS: 0x40fd90 countf countf:308 308
+func: 0x40fd40 controlf 1
+SUCCESS: 0x40fd40 controlf controlf:5 5
+func: 0x40f960 configuref 1
+SUCCESS: 0x40f960 configuref configuref:116 116
+func: 0x40f6e0 RtoB 1
+SUCCESS: 0x40f6e0 RtoB RtoB:72 72
+func: 0x40b360 configure 1
+SUCCESS: 0x40b360 configure configure:1707 1707
+func: 0x407530 config1 1
+SUCCESS: 0x407530 config1 config1:1331 1331
+func: 0x405040 closepins 1
+SUCCESS: 0x405040 closepins closepins:900 900
+func: 0x404c80 add_penal 1
+SUCCESS: 0x404c80 add_penal add_penal:115 115
+func: 0x4048b0 sub_penal 1
+SUCCESS: 0x4048b0 sub_penal sub_penal:115 115
+func: 0x4045b0 new_assgnto_old2 1
+SUCCESS: 0x4045b0 new_assgnto_old2 new_assgnto_old2:95 95
+func: 0x4042b0 old_assgnto_new2 1
+SUCCESS: 0x4042b0 old_assgnto_new2 old_assgnto_new2:95 95
+func: 0x404080 new_assgnto_old1 1
+SUCCESS: 0x404080 new_assgnto_old1 new_assgnto_old1:71 71
+func: 0x403e50 old_assgnto_new1 1
+SUCCESS: 0x403e50 old_assgnto_new1 old_assgnto_new1:71 71
+func: 0x4039d0 new_old 1
+SUCCESS: 0x4039d0 new_old new_old:124 124
+func: 0x402940 changrid 1
+SUCCESS: 0x402940 changrid changrid:530 530
+func: 0x402580 build_feed_imp 1
+SUCCESS: 0x402580 build_feed_imp build_feed_imp:80 80
+func: 0x402240 buildimp 1
+SUCCESS: 0x402240 buildimp buildimp:95 95
+func: 0x401600 alignfeed 1
+SUCCESS: 0x401600 alignfeed alignfeed:90 90
+func: 0x401d90 align_init 1
+SUCCESS: 0x401d90 align_init align_init:156 156
+func: 0x4018e0 re_place 1
+SUCCESS: 0x4018e0 re_place re_place:151 151
+func: 0x400da0 addimp 1
+SUCCESS: 0x400da0 addimp addimp:258 258
+func: 0x45b0d4 _fini 1
+func: 0x45b0d0 __libc_csu_fini 1
+func: 0x45b060 __libc_csu_init 1
+func: 0x400ba0 frame_dummy 1
+func: 0x400b80 __do_global_dtors_aux 1
+func: 0x400ad0 _start 1
+func: 0x400ac0 targ400ac0 0
+func: 0x400930 _init 1
+func: 0x400bd0 acceptt 1
+SUCCESS: 0x400bd0 acceptt acceptt:24 24
+Analysis Done!

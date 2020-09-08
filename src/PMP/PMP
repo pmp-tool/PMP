@@ -1,0 +1,296 @@
+#!/usr/bin/env python
+
+import ctypes
+import os
+import shutil
+import subprocess
+import sys
+import time
+import threading
+
+__NR_printmsg = 328
+__NR_killfamily = 330
+syscall = ctypes.CDLL(None).syscall
+#syscall.restypes = ctypes.c_int
+#syscall.argtypes = ctypes.c_int, ctypes.c_char_p
+
+TIMEOUT = 5
+
+def do_init():
+  global TARGET
+
+  global ROOT
+  global WORKDIR
+  global DATA
+  global ERROR
+
+  global PATH_SCHEME
+  global PATH_TRACE
+
+  global JMPTAB
+  global INSNALL
+  global INSNTMP
+  global INSNCOV
+
+  global QEMU32
+  global QEMU64
+  global ANALYSIS
+  global HOOK
+
+  global RUNPMP
+  global RUNECHO
+  global RUNANALYSIS
+
+  global insn_cov
+  global block_cov
+  global func_cov
+
+  TARGET = sys.argv[1]
+
+  ROOT = os.environ.get("ROOT")
+  WORKDIR = os.environ.get("WORKDIR")
+  DATA = "%s/data" % WORKDIR
+  ERROR = "%s/error" % WORKDIR
+
+  PATH_SCHEME = "%s/path_scheme" % WORKDIR
+  PATH_TRACE = "%s/path_trace" % WORKDIR
+
+  JMPTAB = "%s/jmptab" % DATA
+  INSNALL = "%s/insn.all" % DATA
+  INSNTMP = "%s/insn.tmp" % DATA
+  INSNCOV = "%s/insn.cov" % DATA
+
+  QEMU32 = "%s/qemu/exe-pmp/bin/qemu-i386" % ROOT
+  QEMU64 = "%s/qemu/exe-pmp/bin/qemu-x86_64" % ROOT
+  ANALYSIS = "%s/analysis/analysis.sh" % ROOT
+  HOOK = "%s/hook/libhook.so" % ROOT
+
+  RUNECHO = "cat %s >&2" % PATH_SCHEME
+  RUNPMP = "%s -E LD_PRELOAD=%s -- %s" % (QEMU64, HOOK, TARGET)
+  #RUNPMP = "%s -- %s" % (QEMU64, TARGET)
+  RUNANALYSIS = "%s %s" % (ANALYSIS, TARGET)
+
+  insn_cov = set()
+  block_cov = set()
+  func_cov = set()
+
+
+def do_analysis():
+  global insn_all
+  global block_all
+  global func_all
+
+  global insn_map
+  global block_map
+  global func_map
+
+  global cg_all
+  global cfg_all
+
+  global i2f
+  global f2n
+
+  global jmptab
+
+  insn_all = set()
+  block_all = set()
+  func_all = set()
+
+  insn_map = {}
+  block_map = {}
+  func_map = {}
+
+  i2f = {}
+  f2n = {}
+
+  jmptab = {}
+
+  print RUNANALYSIS
+  subprocess.Popen(RUNANALYSIS, shell=True).wait()
+
+  with open(INSNALL, "r") as f:
+    for line in f:
+      arr = line.strip().split("||")
+      insn_addr = arr[0]
+      if "f" in arr:
+        func_addr = insn_addr
+        func_all.add(func_addr)
+        func_map[func_addr] = set()
+        f2n[func_addr] = arr[-1]
+      if "b" in arr:
+        block_addr = insn_addr
+        block_all.add(block_addr)
+        block_map[block_addr] = set()
+        func_map[func_addr].add(block_addr)
+      insn_all.add(insn_addr)
+      insn_map[insn_addr] = arr[1]
+      block_map[block_addr].add(insn_addr)
+      i2f[insn_addr] = func_addr
+
+  with open(JMPTAB, "r") as f:
+    for line in f:
+      (src, dest) = line.strip().split('#')
+      if not src in jmptab:
+        jmptab[src] = set()
+      jmptab[src].add(dest)
+
+  print jmptab
+
+
+def read_insn_tmp():
+  insn_tmp = set()
+  block_tmp = set()
+  func_tmp = set()
+
+  if not os.path.exists(INSNTMP):
+    return
+
+  with open(INSNTMP, "r") as f:
+    for line in f:
+      line = line.strip()
+      if line in insn_all:
+        insn_tmp.add(line)
+      if line in block_all:
+        block_tmp.add(line)
+      if line in func_all:
+        func_tmp.add(line)
+
+  return (insn_tmp, block_tmp, func_tmp)
+
+
+def test():
+  print "test"
+
+def do_explore():
+  global worklist
+  global fitness
+
+  global execution
+  global succ
+  global fail
+
+  global insn_cov
+  global block_cov
+  global func_cov
+
+  shutil.rmtree(DATA, ignore_errors=True) if os.path.exists(DATA) else None
+  os.mkdir(DATA)
+
+  shutil.rmtree(ERROR, ignore_errors=True) if os.path.exists(ERROR) else None
+  os.mkdir(ERROR)
+
+  do_analysis()
+
+  worklist = [[]]
+  fitness = set()
+
+  execution = 0
+  succ = 0
+  fail = 0
+
+  while len(worklist) > 0:
+    os.remove(PATH_SCHEME) if os.path.exists(PATH_SCHEME) else None
+    os.remove(PATH_TRACE) if os.path.exists(PATH_TRACE) else None
+
+    switches = worklist.pop()
+
+    with open(PATH_SCHEME, "w+") as f:
+      msg = ""
+      for (src, dest) in switches:
+        if dest == "T" or dest == "F":
+          line = src + ":" + dest + "\n"
+        else:
+          line = src + "#" + dest + "\n"
+        f.write(line)
+        msg += (line.strip() + "|")
+      syscall(__NR_printmsg, ctypes.c_char_p(msg))
+
+    subprocess.Popen(RUNECHO, shell=True).wait()
+    print "----------\n"
+
+
+    proc = subprocess.Popen(RUNPMP.split())
+#    proc.wait()
+
+    timer = threading.Timer(TIMEOUT, syscall, [__NR_killfamily, proc.pid])
+
+    try:
+      timer.start()
+      stdout, stderr = proc.communicate()
+    finally:
+      timer.cancel()
+
+#    sleep(TIMEOUT)
+
+#    if proc.poll() is None:
+#      print "killing pid: %d %d" % (proc.pid, os.getpid())
+#      syscall(__NR_killfamily, proc.pid)
+
+    print "==========\n"
+
+    start_time = time.time() #TBD
+
+    execution += 1
+
+    preds = []
+    with open(PATH_TRACE, "r") as f:
+      for line in f:
+        if ":" in line:
+          (src, dest) = line.strip().split(':')
+          preds += [(src, dest)]
+          fitness.add((src, dest))
+        elif "#" in line:
+          (src, dest) = line.strip().split('#')
+          if not src in jmptab:
+            continue
+          preds += [(src, dest)]
+          fitness.add((src, dest))
+
+# DUMP
+    (insn_tmp, block_tmp, func_tmp) = read_insn_tmp()
+    insn_cov = insn_cov.union(insn_tmp)
+    block_cov = block_cov.union(block_tmp)
+    func_cov = func_cov.union(func_tmp)
+
+    if len(switches) > 0:
+      t = switches[-1]
+    else:
+      t = None
+
+    if t in preds:
+      index = preds.index(t)
+    else:
+      index = -1
+
+    preds = preds[index+1:]
+    #break #
+
+    for (src, dest) in preds:
+      candidate = set()
+
+      if dest == "T":
+        candidate.add("F");
+      elif dest == "F":
+        candidate.add("T");
+      elif src in jmptab:
+        for target in jmptab[src]:
+          if not (target == dest):
+            candidate.add(target)
+
+      for target in candidate:
+        if (src, target) in fitness:
+          continue
+        new_switches = switches + [(src, target)]
+        worklist.append(new_switches)
+        fitness.add((src, target))
+
+    end_time = time.time() #TBD
+
+
+def main():
+  do_init()
+  do_explore()
+  
+
+if __name__ == "__main__":
+  main()
