@@ -9,7 +9,7 @@ Please refer to the [paper](https://www.cs.purdue.edu/homes/zhan3299/res/SP20.pd
 docker pull izhuer/pmp
 ```
 
-We recommend any interested reader to refer to [our docker hub](https://hub.docker.com/r/izhuer/pmp) for more information.
+We recommend interested readers to refer to our docker hub [repo](https://hub.docker.com/r/izhuer/pmp) for more information.
 
 ## Cite
 
